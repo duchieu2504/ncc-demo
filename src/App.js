@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./component/Footer";
+import Header from "./component/Header";
+import Main from "./component/Main";
+import SideBar from "./component/SideBar";
+import styles from "./App.module.scss";
+import clsx from "clsx";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import GlobalStyles from "./GlobalStyles";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <GlobalStyles>
+            <BrowserRouter>
+                <div className={clsx(styles.app_ncc)}>
+                    <div className={clsx(styles.sideBar_container)}>
+                        <SideBar />
+                    </div>
+
+                    <div className={clsx(styles.content)}>
+                        <Header />
+                        <Routes>
+                            <Route path="/" element={<Main />}></Route>
+                        </Routes>
+                        <Footer />
+                    </div>
+                </div>
+            </BrowserRouter>
+        </GlobalStyles>
+    );
 }
 
 export default App;

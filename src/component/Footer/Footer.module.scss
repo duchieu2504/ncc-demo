@@ -1,0 +1,14 @@
+@use "./../../GlobalStyles/breakpoints" as *;
+
+.footer {
+    border-top: 1px solid #e3e3e3;
+    padding: 30px;
+    p {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: #3e3e3e;
+    }
+    @include lg {
+        padding: 30px 0;
+    }
+}

@@ -1,0 +1,17 @@
+@use "./GlobalStyles/breakpoints" as *;
+
+.app_ncc {
+    display: flex;
+    min-height: 100vh;
+}
+.sideBar_container {
+    flex: 0.1;
+    min-height: 100vh;
+    display: none;
+    @include lg {
+        display: block;
+    }
+}
+.content {
+    flex: 1;
+}

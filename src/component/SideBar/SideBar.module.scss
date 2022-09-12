@@ -1,0 +1,30 @@
+@use "./../../GlobalStyles/breakpoints" as *;
+
+.sideBar {
+    background-color: #000;
+    height: 100%;
+    &_list {
+    }
+    &_item {
+        border-bottom: 1px solid #aaaaaa;
+        padding: 10px 20px;
+
+        &_link {
+            color: #aaaaaa;
+            font-size: 1.6rem;
+            font-weight: 700;
+            display: block;
+            line-height: 2rem;
+            // text-decoration: none;
+            &:hover {
+                color: #fff;
+            }
+        }
+        &.active {
+            opacity: 1;
+            .sideBar_item_link {
+                color: #fff;
+            }
+        }
+    }
+}
